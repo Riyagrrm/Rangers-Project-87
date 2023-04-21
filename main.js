@@ -1,4 +1,3 @@
-
 // Create canvas variable
 var canvas= new fabric.Canvas("myCanvas")
  block_y=1;
@@ -15,8 +14,8 @@ function new_image(get_image)
 	fabric.Image.fromURL(get_image, function(Img)
 	{
 		block_image_object= Img
-		block_image_object= scaleToWidth(block_image_width)
-		block_image_object= scaleToHeight(block_image_height)
+		block_image_object.scaleToWidth(block_image_width)
+		block_image_object.scaleToHeight(block_image_height)
 		block_image_object.set({
 		top:block_y,
 		left:block_x
@@ -35,32 +34,32 @@ console.log(keyPressed);
 	if(keyPressed == '82') // add appropriate keycode
 	{
 		// upload red ranger
-		new_image="rr1.png"
+		new_image("rr1.png")
 	}
 	if(keyPressed == '71')
 	{
 		block_x = 200;
 		// upload green ranger
-		new_image="gr.png"
+		new_image("gr.png")
 	}
 	
 	if(keyPressed == '89')
 	{
 		block_x =350;
 		// upload yellow ranger
-		new_image="yr.png"
+		new_image("yr.png")
 	}
 	if(keyPressed == '80')
 	{
 		block_x = 600;
 		// upload pink ranger
-		new_image="pr.png"
+		new_image("pr.png")
 	}
 	if(keyPressed == '66')
 	{
 		block_x = 700;
 	// upload blue ranger
-	new_image="br.png"
+	new_image("br.png")
 	}
 	
 }
